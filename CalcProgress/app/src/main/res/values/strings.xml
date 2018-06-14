@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CalcProgress</string>
+    <string name="Hint">"?"</string>
+</resources>

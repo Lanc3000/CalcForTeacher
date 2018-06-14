@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.android.calcprogress.InfoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:background="@android:color/holo_blue_dark">
+
+        <LinearLayout
+            android:layout_weight = "1"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_weight = "2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Всего"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:textColor="@android:color/primary_text_light_nodisable" />
+            <TextView
+                android:id="@+id/sum_of_number"
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:textAppearanceLarge" />
+            <Button
+                style="@style/ButtonStyle"
+                android:visibility="invisible"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight = "1"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_weight = "2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:text="Успеваемость"
+                android:textColor="@android:color/primary_text_light_nodisable" />
+            <TextView
+                android:id="@+id/academicPerfomance"
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:textAppearanceLarge"/>
+            <Button
+                style="@style/ButtonStyle"
+                android:text="@string/Hint"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="hintAcademicPerfomance"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight = "1"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_weight = "2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:text="Качество знаний"
+                android:textColor="@android:color/primary_text_light_nodisable" />
+            <TextView
+                android:id="@+id/qualityOfAcademicPerfomance"
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:textAppearanceLarge"/>
+            <Button
+                style="@style/ButtonStyle"
+                android:text="@string/Hint"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="hintQualityOfAcademicPerfomance"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight = "1"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_weight = "2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:text="Степень обученности учащихся"
+                android:textColor="@android:color/primary_text_light_nodisable" />
+            <TextView
+                android:id="@+id/sou"
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:textAppearanceLarge"/>
+            <Button
+                style="@style/ButtonStyle"
+                android:text="@string/Hint"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="hintSou"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight = "1"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_weight = "2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textStyle="bold"
+                android:text="Средний балл"
+                android:textColor="@android:color/primary_text_light_nodisable" />
+            <TextView
+                android:id="@+id/average_text_view"
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="?android:textAppearanceLarge"
+                />
+            <Button
+                style="@style/ButtonStyle"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight = "1"
+           android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <Button
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Отправить по email"/>
+            <Button
+                android:layout_weight = "1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Назад" />
+        </LinearLayout>
+
+     </LinearLayout>
+
+
+</ScrollView>
